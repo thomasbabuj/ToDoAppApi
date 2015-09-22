@@ -5,17 +5,30 @@
 *		ii) we create a basic router, adds the route "/"
 *           and assign the index handler to run when the endpoint is called
 * 3)  Adding additional basic router
+* 4)  A basic Todo model
+*		i) In Golang, a Struct will typically serve as model.
+
  */
 
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/gorilla/mux"
 )
+
+type Todo struct {
+	Name      string
+	Completed bool
+	Due       time.Time
+}
+
+type Todos []Todo // Todos is a slice of type Todo
 
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
@@ -32,7 +45,15 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func TodoIndex(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Tod Index!!")
+	// Send back some JSOn
+	// Simulate a real response and mock out the TodoIndex with static
+	// data
+	todos := Todos{
+		Todo{Name: "Write presenation"},
+		Todo{Name: "Host meetup"},
+	}
+
+	json.NewEncoder(w).Encode(todos)
 }
 
 func TodoShow(w http.ResponseWriter, r *http.Request) {
