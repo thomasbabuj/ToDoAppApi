@@ -7,8 +7,10 @@
 * 3)  Adding additional basic router
 * 4)  A basic Todo model
 *		i) In Golang, a Struct will typically serve as model.
-
- */
+* 5)  Creating idiomatic JSON
+		i) By using the struct tags we can control exactly how our
+		   struct will be marshalled to JSON
+*/
 
 package main
 
@@ -23,9 +25,9 @@ import (
 )
 
 type Todo struct {
-	Name      string
-	Completed bool
-	Due       time.Time
+	Name      string    `json:"name"`
+	Completed bool      `json:"completed"`
+	Due       time.Time `json:"due"`
 }
 
 type Todos []Todo // Todos is a slice of type Todo
