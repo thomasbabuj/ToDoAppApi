@@ -20,6 +20,12 @@ Making a RESTful JSON API in Go
 
 		i) By using the struct tags we can control exactly how our
 		   struct will be marshalled to JSON
-		   
+
  6)  Code refactoring
+
+ 		i) now we utilizes a struct to contain more detailed information
+ 		   about the route. Specifically, we can specify the action, such as
+ 		   GET, POST, DELETE, etc
+
+7)   Creating a Web log Pakcage 		
 
