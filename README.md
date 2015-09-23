@@ -34,5 +34,7 @@ Making a RESTful JSON API in Go
 		i) To apply the decorator, when we create the router, we will simply wrap 
 			all our current routes in it by updating our NewRouter function. 
 
-9)  Refactoring Routes file					
+9)  Refactoring Routes file
+
+10) Updating TodoIndex handlers to return content-type and status code					
 
