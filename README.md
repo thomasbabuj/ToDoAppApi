@@ -32,5 +32,7 @@ Making a RESTful JSON API in Go
 8)  Applying the logger decorator
 	
 		i) To apply the decorator, when we create the router, we will simply wrap 
-			all our current routes in it by updating our NewRouter function. 		
+			all our current routes in it by updating our NewRouter function. 
+
+9)  Refactoring Routes file					
 
