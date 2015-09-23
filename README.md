@@ -27,5 +27,10 @@ Making a RESTful JSON API in Go
  		   about the route. Specifically, we can specify the action, such as
  		   GET, POST, DELETE, etc
 
-7)   Creating a Web log Pakcage 		
+7)   Creating a Web log Pakcage
+
+8)  Applying the logger decorator
+	
+		i) To apply the decorator, when we create the router, we will simply wrap 
+			all our current routes in it by updating our NewRouter function. 		
 
